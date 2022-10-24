@@ -115,25 +115,44 @@ function sumArray(array) {
  *  oddArray([ 11, 15, 20, 22, 37 ]);
  *  //> [ 11, 15, 37 ]
  */
-function oddArray(array) { }
-//let odd =
+function oddArray(array) {
+  let odd = []
 
-//let i = 0
-// for (let i = 0; i < array.length; i++) {
-//   if (array[i] % 2 == 0) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      odd.push(array[i])
+
+    }
+
+
+  }
+  return odd
+}
+
+
+//Brainstorming---V 
+
+//let even = []
+//   //let i = 0
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 === 0) {
+
+//     }
+//   }
+//   return even
+
+
+// const odd = {}
+// for (let i = 0; i < array.length - 1; i++) {
+//   if (array[i] % 1 == 0) {
 //     //array.push(i)
 
 //   }
+
+//   return array
 // }
-// return array
-
-
-
-
-
 //array.filter(n => n % 2)
-//
-//Brainstorming-->
+
 //const odds = array.filter(number => 2)
 // {
 //   return number % 2 !== 0;
@@ -151,13 +170,14 @@ function oddArray(array) { }
  */
 function evenArray(array) {
   let even = []
-  //let i = 0
+
   for (let i = 0; i < array.length; i++) {
     if (array[i] % 2 === 0) {
+      even.push(array[i])
 
     }
   }
-  return array
+  return even
 }
 // Brainstorming--->
 //let even = []
@@ -177,8 +197,21 @@ function evenArray(array) {
  *  findSmallest([ 0, 11, -2, 5 ]);
  *  //> -2
  */
-function findSmallest(array) { }
+function findSmallest(array) {
+  let smallest = array[0];
+  for (let i = 1; i < array.length; i++) {
+    if ((array[i]) < smallest) {
+      smallest = array[i];
+    }
+    return smallest;
+  }
 
+}
+// let result = min
+// for (let i = 0; i < array.length; i++) {
+//   min = Math.min(min, array[i])
+// }
+// return result
 /**
  * findLargest()
  * ---------------------
@@ -238,4 +271,5 @@ module.exports = {
   findLargest,
   findEqual,
   removeDuplicates,
+
 };
