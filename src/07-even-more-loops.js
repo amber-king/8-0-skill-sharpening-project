@@ -115,22 +115,22 @@ function sumArray(array) {
  *  oddArray([ 11, 15, 20, 22, 37 ]);
  *  //> [ 11, 15, 37 ]
  */
-function oddArray(array) {
-  let odd =
+function oddArray(array) { }
+//let odd =
 
-    //let i = 0
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] % 2 == 0) {
-      //array.push(i)
+//let i = 0
+// for (let i = 0; i < array.length; i++) {
+//   if (array[i] % 2 == 0) {
+//     //array.push(i)
 
-    }
-  }
-  return array
-
-
+//   }
+// }
+// return array
 
 
-}
+
+
+
 //array.filter(n => n % 2)
 //
 //Brainstorming-->
