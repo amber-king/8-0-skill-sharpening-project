@@ -11,6 +11,7 @@
  *  //> 25
  *  (3 + 4 + 5 + 6 + 7 = 25)//add to the 
  */
+
 function rangeSum(min, max) {
   //const result = { number }
   let i = min;
@@ -22,7 +23,6 @@ function rangeSum(min, max) {
     min++
   }
   return min;
-
 
 }
 
@@ -71,29 +71,17 @@ function rangeSum(min, max) {
  *  rangeOdd(10, 15);
  *  //> [ 15, 13, 11 ]
  */
-
-//hit every other number
 function rangeOdd(min, max) {
-  // const result = [];
-  // let i = min % 2 ? min : ++min;
-  // while (i <= max) {
-  //   return i
-  // }
-  // return result
+  let arr = [];
+  let i;
+  for (i = max; i >= min; i--) 
+  {
+    if (i % 2 != 0)
+    arr.push(i)
+  }
+  return arr;
 }
-//Brainstorming----V
-// let oddNums = [];
-// for (let i = 0; i < array.length; i++) {
-//   if (array[i] % 2 !== 0) {
-//     oddNums.push(array[i]);
-//   }
-// }
-// oddNums = oddNums.sort((min, max) => min - max);
-// array.concatI(oddNums);
-// array = array.sort((min, max) => a - b);
-// return []
 
-//arr.sort((min, max) => min % 2 && max % 2 ? min - max : 0)
 /**
  * rangeEveryOther()
  * ---------------------
@@ -106,7 +94,24 @@ function rangeOdd(min, max) {
  *  rangeEveryOther(11, 18);
  *  //> [ 11, 13, 15, 17 ]
  */
-function rangeEveryOther(min, max) { }
+
+function rangeEveryOther(min, max) {
+let arr =[];
+  if (min % 2 === 0) {
+     for (let i = min; i <= max; i++) {
+        if (i % 2 === 0) {
+          arr.push(i) }
+      } 
+  }
+  else {
+    for (let i = min; i <= max; i++) {
+      if (i % 2 != 0) {
+        arr.push(i) }
+    } 
+  }
+return arr
+}
+
 
 /**
  * containsWhileLoop()
@@ -128,7 +133,18 @@ function rangeEveryOther(min, max) { }
  *  containsWhileLoop([ "left", "up", "right" ], "down");
  *  //> false
  */
-function containsWhileLoop(array, target) { }
+
+function containsWhileLoop(array, target) {
+  let i = 0
+    while (i < array.length) {
+      if (array[i] === target) {
+        return true
+      }
+      i++
+    }
+    return false
+}
+
 
 /**
  * containsForLoop()
@@ -150,7 +166,16 @@ function containsWhileLoop(array, target) { }
  *  containsForLoop([ "left", "up", "right" ], "down");
  *  //> false
  */
-function containsForLoop(array, target) { }
+
+function containsForLoop(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === target) {
+      return true
+    }
+  }
+  return false
+}
+
 
 /**
  * targetCount()
