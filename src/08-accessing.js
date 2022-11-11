@@ -203,17 +203,20 @@ function getFullAddress(person) {
     };
  */
 function getFlatObject(person) {
-  console.log(person.numbers)
-  const newObj = {}
-  let names = person.names
-  let address = person.address
-
-  Object.assign(newObj, names, address)
-  newObj.numbers = JSON.parse(JSON.stringify(person.numbers))
-  console.log(newObj.numbers)
-  return newObj
+  return JSON.parse(JSON.stringify(person))
 }
-//Brainstorming ---V
+  
+
+
+//Brainstorming ---Vconsole.log(person.numbers)
+// const newObj = {}
+// let names = person.names
+// let address = person.address
+
+// Object.assign(newObj, names, address)
+// newObj.numbers = JSON.parse(JSON.stringify(person.numbers))
+// console.log(newObj.numbers)
+// return newObj
 // const numbers = [7185550921, 7185558611]
 // const i = new Array(7185550921, 7185558611)
 

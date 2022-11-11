@@ -74,15 +74,6 @@ function shoutForOfLoop(array) {
     return array
   }
 }
-//Brainstorming & Notes ---V
-//claims its not a for loop in the npm test result->needs a for...of loop
-// for (let value of i = 0) {
-//   i < array.length
-
-//   newArr.push(array[i] + '!')
-//   i++;
-//}
-//element is i in array, what we are looking through the array for an element
 
 /**
  * sumArray()
@@ -103,7 +94,6 @@ function sumArray(array) {
   return total
 }
 
-//return array[array.length - 1]
 /**
  * oddArray()
  * ---------------------
@@ -116,90 +106,65 @@ function sumArray(array) {
  *  //> [ 11, 15, 37 ]
  */
 
-function oddArray(array) { 
+function oddArray(array) {
   let odd = []
-  for(let i = 0; i < array.length; i++){
-       if (array[i] % 2 !== 0){ 
-        odd.push(array[i])
-   }
-          
-  }
-return odd
-
-
-// const odd = {}
-// for (let i = 0; i < array.length - 1; i++) {
-//   if (array[i] % 1 == 0) {
-//     //array.push(i)
-
-//   }
-
-//   return array
-// }
-//array.filter(n => n % 2)
-
-//const odds = array.filter(number => 2)
-// {
-//   return number % 2 !== 0;
-// }
-/**
- * evenArray()
- * ---------------------
- * Returns a new array of only the even numbers from the original array.
- * @param {number[]} array
- * @returns {array}
- *
- * EXAMPLE:
- *  evenArray([ 11, 15, 20, 22, 37 ]);
- *  //> [ 20, 22 ]
- */
-
-function evenArray(array) {
-  let even =[]
-  for (let i = 0; i< array.length; i++) {
-
-  if (array[i] % 2 === 0){even.push(array[i])}
-  
- }
- return even
-
-}
-// Brainstorming--->
-//let even = []
-//   for (let i = 0; i < array.length; i++) {
-//     if (array[i] % 2 == 0) {
-//       return array
-//     }
-//}
-/**
- * findSmallest()
- * ---------------------
- * Returns the smallest number from the array.
- * @param {number[]} array
- * @returns {number}
- *
- * EXAMPLE:
- *  findSmallest([ 0, 11, -2, 5 ]);
- *  //> -2
- */
-
-function findSmallest(array) {
-  let smallest = array[0]
-  for (i =0; i < array.length; i++){
-    if (array[i] <= smallest){
-      smallest = array[i]
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      odd.push(array[i])
     }
+
   }
-return smallest
+  return odd
 }
 
+  /**
+     * evenArray()
+     * ---------------------
+     * Returns a new array of only the even numbers from the original array.
+     * @param {number[]} array
+     * @returns {array}
+     *
+     * EXAMPLE:
+     *  evenArray([ 11, 15, 20, 22, 37 ]);
+     *  //> [ 20, 22 ]
+     */
 
-}
-// let result = min
-// for (let i = 0; i < array.length; i++) {
-//   min = Math.min(min, array[i])
-// }
-// return result
+  function evenArray(array) {
+    let even = []
+    for (let i = 0; i < array.length; i++) {
+
+      if (array[i] % 2 === 0) { even.push(array[i]) }
+
+    }
+    return even
+
+  }
+
+  /**
+   * findSmallest()
+   * ---------------------
+   * Returns the smallest number from the array.
+   * @param {number[]} array
+   * @returns {number}
+   *
+   * EXAMPLE:
+   *  findSmallest([ 0, 11, -2, 5 ]);
+   *  //> -2
+   */
+
+  function findSmallest(array) {
+    let smallest = array[0]
+    for (i = 0; i < array.length; i++) {
+      if (array[i] <= smallest) {
+        smallest = array[i]
+      }
+    }
+    return smallest
+  }
+
+
+
+
 /**
  * findLargest()
  * ---------------------
@@ -214,12 +179,12 @@ return smallest
 
 function findLargest(array) {
   let largest = array[0]
-  for (i =0; i < array.length; i++){
-    if (array[i] >= largest){
+  for (i = 0; i < array.length; i++) {
+    if (array[i] >= largest) {
       largest = array[i]
     }
   }
-return largest
+  return largest
 }
 
 
@@ -240,12 +205,12 @@ return largest
  */
 
 function findEqual(array, selected) {
-  for (let i = 0; i < array.length; i++){
-    if (array[i] === selected){
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === selected) {
       return true
     }
   }
-      return false
+  return false
 }
 
 
@@ -267,12 +232,12 @@ function findEqual(array, selected) {
 
 function removeDuplicates(array) {
   let newArr = []
-  for (let i = 0; i <array.length; i++){
-    if (newArr.includes(array[i])=== false) {
+  for (let i = 0; i < array.length; i++) {
+    if (newArr.includes(array[i]) === false) {
       newArr.push(array[i])
     }
   }
-  return newArr 
+  return newArr
 
 }
 
